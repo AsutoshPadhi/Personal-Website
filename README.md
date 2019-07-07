@@ -1,5 +1,6 @@
-The subsections will be 
-1. Personal
-2. Products
-3. Work Experience
-4. Achievements
+##Personal Website
+
+This is my personal website.
+You can visit it [here](https://asutoshpadhi.netlify.com/)
+
+The idea of the site was inspired by [Melanie Daveid](http://melaniedaveid.com/) and [Pascal Van Germet](http://www.pascalvangemert.nl/)
