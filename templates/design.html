@@ -1,0 +1,673 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="main-section">
+    <div class="columns is-gapless">
+        <div class="column sub-section-big" id="products" onclick="productsOverlay()">
+            <!-- Product Section -->
+            <div class="product-heading has-text-centered" id="product-heading">
+                Products
+            </div>
+            <!-- <div class="image-placeholder" id="image-placeholder">
+                <img src="../static/images/robot.png" alt="">
+            </div> -->
+            <div class="product-content content" id="product-content">
+                <ol type="1">
+                    <a href="https://github.com/khalDrogo13/Face-verification-siamese-network" class="tooltip"><li>
+                        EYC
+                        <div class="tooltiptext">
+                            EYC : Cross Verification of Images for Eye Care
+                            <hr>
+                            An application that uses Siamese Neural Network to find similarity between occluded images
+                        </div>
+                    </li></a>
+                    <a href="https://github.com/kb-studios/GraceEngine" class="tooltip"><li>
+                        Grace Engine
+                        <div class="tooltiptext">
+                            Grace Engine : A Natural Lanuage Based Programming Engine
+                            <hr>
+                            An application that converts Natural Language to python code segments for non-programmers to understand coding without learning the syntax
+                        </div>
+                    </li></a>
+                    <a href="https://github.com/khalDrogo13/BeingIndian-SIH" class="tooltip"><li>
+                        Being Indian
+                        <span class="tooltiptext">Being Indian</span>
+                    </li></a>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Bio Section -->
+        <div class="column is-three-fifths bio-content" id="bio-content">
+            <div class="columns is-gapless">
+                <div class="column bio-content-1" id="bio-content-1">
+                    <br><br><br><br><br><br>
+                    <div class="bio-content-heading is-size-2" id="bio-content-heading">Asutosh Padhi</div>
+                    <hr>
+                    <br><br><br>
+                    <p class="has-text-justified">Hey! <br>
+                    I'm a Computer Engineering student based in Mumbai, India. I have a passion for developing products with real life applications. I am actively looking for projects in Deep Learning and Machine Learning. </p>
+                </div>
+                <div class="column bio-content-2" id="bio-content-2">
+                    <div class="profile-pic" id="profile-pic">
+                        <img src="../static/images/me.jpg" alt="">
+                    </div>
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div class="is-size-4" id="bio-content-heading">Contact me :</div>
+                    <br>
+                    <div>
+                        <span class="icon" style="border-right:#1B9051 1px solid; margin-left:20%; padding-right: 7%;">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                        <span style="margin-left: 7%;">+91 8976110115</span>
+                    </div>
+                    <br>
+                    <div>
+                        <span class="icon" style="border-right:#1B9051 1px solid; margin-left:20%; padding-right: 7%;">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span style="margin-left: 7%;">asutosh.padhi13@gmail.com</span>
+                    </div>
+                    <br>
+                    <a class="button is-large icon-button" style="margin-left:20%;">
+                        <span class="icon">
+                          <i class="fab fa-github"></i>
+                        </span>
+                    </a>
+                    <a class="button is-large icon-button">
+                        <span class="icon">
+                          <i class="fab fa-kaggle"></i>
+                        </span>
+                    </a>
+                    <a class="button is-large icon-button">
+                        <span class="icon">
+                          <i class="fab fa-linkedin"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <p class="buttons" id="bio-close" onclick="bioClose()">
+                <a class="button">
+                    <span class="icon">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </a>
+            </p>
+        </div>
+
+        <div class="column sub-section-container">
+            <!-- Experience Section -->
+            <div class="sub-section-small" id="work-experience" onclick="workOverlay()">
+                <div class="work-heading has-text-centered" id="work-heading">
+                    Experience
+                </div>
+                <div class="work-content" id="work-content">
+                    <ol type="1">
+                        <li class="tooltip">
+                            Intern at DataBytes
+                            <div class="tooltiptext">
+                                DataBytes : SDE
+                                <hr>
+                                June 2018 - July 2018
+                                <br>
+                                Developed an application for Facial Emotion Recognition
+                            </div>
+                        </li>
+                        <li class="tooltip">
+                            Intern at VESIT
+                            <div class="tooltiptext">
+                                VESIT : SDE
+                                <hr>
+                                June 2017 - July 2017
+                                <br>
+                                Developed 3 modules for the Content Management System of our college; thus digitizing the college
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Education Section -->
+            <div class="sub-section-small" id="education" onclick="educationOverlay()">
+                <div class="education-heading has-text-centered" id="education-heading">
+                    Education
+                </div>
+                <div class="education-content" id="education-content">
+                    <ol type="1">
+                        <li>
+                            BE - Vivekanand Education Society's Institute of Technology
+                        </li>
+                        <li>
+                            HSC - Don Bosco Senior Secondary School
+                        </li>
+                        <li>
+                            SSC - Presentation Convent School
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <p class="buttons" id="reset" onclick="reset()">
+            <a class="button">
+                <span class="icon">
+                    <i class="fas fa-expand"></i>
+                </span>
+            </a>
+        </p>
+
+        <div class="bio" id="bio" >
+            <div class="is-size-3 has-text-centered" id="bio-heading">Asutosh Padhi</div>
+        </div>
+        
+    </div>
+    
+</div>
+
+<style>
+    .main-section
+    {
+        height: 100vh;
+        background-color: #57BA86;
+        /*overflow: hidden;*/
+    }
+
+    .sub-section-big
+    {
+        height: 100vh;
+        margin-right: 0.15rem !important;
+    }
+
+    .sub-section-container
+    {
+        height: 100vh;
+    }
+
+    .sub-section-small
+    {
+        height: 49.6%;
+        margin-left: 0.15rem !important;
+    }
+
+    .bio
+    {
+        shape-outside: circle(20% );
+        clip-path: circle(50%);
+        width: 300px;
+        height: 300px;
+        color: #1B9051;
+        border-radius: 50%;
+        border: 6px solid #57BA86;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        transition: 1s;
+    }
+
+    .bio:hover
+    {
+        color: white;
+        background-color: #37A269;
+    }
+
+    #bio-overlay
+    {
+        background-color: #B7EBCF;
+        opacity: 0.98;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        display: none;
+    }
+
+    #bio-close
+    {
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        opacity: 1;
+        background-color: #B7EBCF;
+        border: none;
+    }
+
+    #bio-close a
+    {
+        background-color: #B7EBCF;
+        border: none;
+    }
+
+    #bio-content
+    {
+        display: none;
+        transition: 2s ease-out;
+        position: relative;
+        background-color: #B7EBCF;
+        transform: scale(0);
+    }
+
+    #bio-content-heading
+    {
+        color: #1B9051;
+        position: relative;
+        /*top: 200%;*/
+        left: 20%;
+    }
+
+    #bio-content-1, #bio-content-2
+    {
+        padding: 5%;
+        margin-left: 5%;
+        color: #1B9051;
+    }
+
+    .bio-heading
+    {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .icon-button
+    {
+        background-color: #B7EBCF;
+        margin: 2%;
+        border: none;
+    }
+
+    #profile-pic
+    {
+        position: absolute;
+        top: 10%;
+        left: 65%;
+        width: 20%;
+        height: 20%;
+        /*transform: translate(-50%,-50%);*/
+    }
+
+    #profile-pic img
+    {
+        opacity: 0.9;
+        border-radius: 50%;
+    }
+
+    .ripple 
+    {
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        position: absolute;
+        opacity: 1;
+    }
+    
+    .rippleEffect 
+    {
+        animation: rippleDrop .6s linear;
+    }
+      
+    @keyframes rippleDrop 
+    {
+        100% 
+        {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
+
+    /*Product Section*/
+    
+    #products
+    {
+        background-color: white;
+        transition: 1s;
+        position: relative;
+    }
+    
+    #products:hover
+    {
+        /*opacity: 0.3;*/
+        background-color: #B7EBCF;
+    }
+
+    .product-heading
+    {
+        font-size: 3.5rem;
+        color: #1B9051;
+        position: relative;
+        top: 18%;
+        transition: 1s;
+    }
+
+    #product-content
+    {
+        display: none;
+        position: relative;
+        top: 20%;
+        left: 15%;
+        transform: translate(-50%,-50%);
+    }
+
+    #product-content ol
+    {
+        width: 30%;
+        z-index: -99;
+    }
+
+    #product-content li
+    {
+        padding: 1.5%;
+        font-size: 1.5rem;
+        color: #1B9051;
+    }
+
+    #product-content a li
+    {
+        position: relative;
+    }
+
+    #product-content li:hover
+    {
+        color: #37A269;
+    }
+
+    .image-placeholder img
+    {
+        height: 5%;
+        position: relative;
+        width: 15%;
+        bottom: 0%;
+        top: 50%;
+        opacity: 1;
+        left: 0%;
+    }
+
+    .image-placeholder
+    {
+        position: relative;
+        top: 70%;
+        left: 5%;
+        bottom: 2%;
+    }
+
+    /*Experience Section*/
+
+    #work-experience
+    {
+        background-color: white;
+        margin-bottom: 0.3rem !important;
+        position: relative;
+    }
+
+    #work-experience:hover
+    {
+        background-color: #B7EBCF;
+    }
+
+    #work-heading
+    {
+        font-size: 2.5rem;
+        color: #1B9051;
+        position: relative;
+        top: 40%;
+        transform: translateY(-50%);
+        transition: 1s;
+    }
+
+    #work-content
+    {
+        display: none;
+        position: relative;
+        top: 25%;
+        left: 25%;
+    }
+
+    #work-content li
+    {
+        padding: 1.5%;
+        font-size: 1.5rem;
+        color: #1B9051;
+    }
+
+    /*Education Section*/
+
+    #education
+    {
+        background-color: white;
+        margin-top: 0.3rem !important;
+    }
+
+    #education:hover
+    {
+        background-color: #B7EBCF;
+    }
+
+    #education-heading
+    {
+        font-size: 2.5rem;
+        color: #1B9051;
+        position: relative;
+        top: 40%;
+        transition: 1s;
+    }
+
+    #education-content
+    {
+        display: none;
+        position: relative;
+        top: 25%;
+        left: 25%;
+    }
+
+    #education-content li
+    {
+        padding: 1%;
+        font-size: 1.3rem;
+        color: #1B9051;
+    }
+
+    #reset
+    {
+        position: fixed;
+        bottom: 0px;
+        right: 20px;
+        z-index: 100;
+    }
+
+    .tooltiptext 
+    {
+        visibility: hidden;
+        display: none;
+        width: 470px;
+        background-color: #B7EBCF;
+        border: #1B9051 solid 1px;
+        color: #1B9051;
+        text-align: center;
+        border-radius: 6px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        padding-left: 2%;
+        padding-right: 2%;
+        position: absolute;
+        z-index: 100;
+        top: -10%;
+        left: 60%;
+        font-size: 1rem;
+    }
+
+    .tooltiptext::after 
+    {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        z-index: 100;
+        margin-top: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent #1B9051 transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext 
+    {
+        visibility: visible;
+        display: block;
+    }
+
+</style>
+
+<script>
+
+var bio =  document.getElementById("bio");
+var products =  document.getElementById("products");
+var work =  document.getElementById("work-experience");
+var education =  document.getElementById("education");
+
+function bioOverlay()
+{
+    reset();
+    document.getElementById("bio-content").style.display = "inline";
+    bio.style.display = "none";
+    document.getElementById("product-heading").style.fontSize = "1.5rem";
+    document.getElementById("work-heading").style.fontSize = "1.5rem";
+    document.getElementById("education-heading").style.fontSize = "1.5rem";
+    document.getElementById("product-heading").style.top = "50%";
+    document.getElementById("product-heading").style.transform = "translateY(-50%)";
+    document.getElementById("work-heading").style.top = "50%";
+    document.getElementById("work-heading").style.transform = "translateY(-50%)";
+}
+
+function bioClose()
+{
+    //TODO: reset messes up the heading positions
+    reset();
+    //window.location.reload();
+}
+
+$(".bio").click(function (e) {
+  
+    // Remove any old one
+    $(".ripple").remove();
+  
+    // Setup
+    var posX = $(this).offset().left,
+        posY = $(this).offset().top,
+        buttonWidth = $(this).width(),
+        buttonHeight =  $(this).height();
+    
+    // Add the element
+    $(this).prepend("<span class='ripple'></span>");
+  
+    
+   // Make it round!
+    if(buttonWidth >= buttonHeight) {
+      buttonHeight = buttonWidth;
+    } else {
+      buttonWidth = buttonHeight; 
+    }
+    
+    // Get the center of the element
+    var x = e.pageX - posX - buttonWidth / 2;
+    var y = e.pageY - posY - buttonHeight / 2;
+    
+   
+    // Add the ripples CSS and start the animation
+    $(".ripple").css({
+      width: buttonWidth,
+      height: buttonHeight,
+      top: y + 'px',
+      left: x + 'px'
+    }).addClass("rippleEffect");
+
+    //bioOverlay();
+    setTimeout(function() { 
+        bioOverlay();
+        document.getElementById("bio-content").style.transform = "scale(1)";
+    }, 500);
+});
+
+function productsOverlay()
+{
+    //alert("Products");
+    reset();
+    products.classList.add("is-four-fifths");
+    bio.style.transform = "translate(70%,-50%)";
+    bio.style.transition = "1s";
+    document.getElementById("product-heading").style.transform = "translateY(-50%)";
+    document.getElementById("product-heading").style.transition = "1s";
+    document.getElementById("work-heading").style.fontSize = "1.5rem";
+    document.getElementById("work-heading").style.transition = "0.2s";
+    document.getElementById("education-heading").style.fontSize = "1.5rem";
+    document.getElementById("product-content").style.display = "inline";
+}
+
+function workOverlay()
+{
+    reset();
+    document.getElementById("products").classList.add("is-one-fifth");
+    document.getElementById("bio").style.transform = "translate(-180%,0%)";
+    document.getElementById("work-experience").style.height = "75vh";
+    document.getElementById("education").style.height = "25vh";
+    document.getElementById("education-heading").style.fontSize = "1.5rem";
+    document.getElementById("work-experience").style.transition = "1s";
+    document.getElementById("work-heading").style.top = "18%";
+    document.getElementById("work-heading").style.transition = "1s";
+    document.getElementById("work-content").style.display = "inline";
+    document.getElementById("product-heading").style.fontSize = "1.5rem";
+}
+
+function educationOverlay()
+{
+    reset();
+    document.getElementById("products").classList.add("is-one-fifth");
+    document.getElementById("bio").style.transform = "translate(-392px,-200px)";
+    document.getElementById("education").style.height = "75vh";
+    work.style.height = "25vh";
+    document.getElementById("education").style.transition = "1s";
+    document.getElementById("education-heading").style.transform = "translateY(-150%)";
+    document.getElementById("education-heading").style.transition = "1s";
+    document.getElementById("bio").style.transform = "translate(-180%,-100%)";
+    document.getElementById("education-content").style.display = "inline";
+    document.getElementById("product-heading").style.fontSize = "1.5rem";
+    document.getElementById("product-heading").style.top = "50%";
+    document.getElementById("work-heading").style.fontSize = "1.5rem";
+}
+
+function reset()
+{
+    document.getElementById("bio-content").style.display = "none";
+    bio.style.display = "block";
+    document.getElementById("bio-heading").classList.add("bio-heading");
+    products.classList.remove("is-four-fifths");
+    products.classList.remove("is-one-fifth");
+    work.style.height = "50vh";
+    education.style.height = "50vh";
+    bio.style.left = "0px";
+    bio.style.top = "0px";
+    bio.style.left = "50%";
+    bio.style.top = "50%";
+    bio.style.transform = "translate(-50%,-50%)";
+    document.getElementById("product-heading").style.top = "18%";
+    document.getElementById("product-heading").style.fontSize = "3.5rem";
+    //TODO: reset the position of heading
+    document.getElementById("work-heading").style.fontSize = "2.5rem";
+    document.getElementById("work-heading").style.top = "18%";
+    document.getElementById("education-heading").style.fontSize = "2.5rem";
+    document.getElementById("product-content").style.display = "none";
+    document.getElementById("work-content").style.display = "none";
+    document.getElementById("education-content").style.display = "none";
+}
+
+</script>
+
+{% endblock %}
