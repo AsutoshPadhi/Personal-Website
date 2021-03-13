@@ -6,7 +6,7 @@
     <section id="intro">
         <div class="has-text-centered has-text-white is-size-1" id="intro-content">
             <div id="intro-heading">
-                Asutosh Padhi
+                <span style="font-size:5rem">A</span>SUTOSH
             </div>
             <hr>
             <div class="has-text-centered has-text-white" id="intro-subheading">
@@ -27,6 +27,11 @@
                 <div class="has-text-centered has-text-white is-size-2 heading-content">
                     About Me
                 </div>
+                <div class="is-pulled-right" id="dp">
+                    <figure class="image is-128x128">
+                        <img src="../static/images/alcher-hex.png">
+                    </figure>
+                </div>
             </div>
             <div class="column is-half slideshow-container" id="about-me-data">
                 <br>
@@ -36,9 +41,9 @@
                     <p class="has-text-justified">
                         I'm a Computer Engineering student based in Mumbai, India. I have a passion for developing products with real life applications. 
                         <br><br>
-                        I am very interested in projects relating Deep Learning and Machine Learning, especially Computer Vision.
+                        I am very interested in projects relating Deep Learning and Machine Learning.
                         <br><br>
-                        I am currently pursuing my Masters in Computer Engineering in IIT-Guwahati.
+                        I am an incoming SDE 2 at Walmart Labs India.
                     </p>
                 </div>
 
@@ -57,7 +62,7 @@
                     <p class="has-text-justified is-size-2" style="font-family: 'Simplifica'; font-size:2rem;"><b>MTech</b></p>
                     <p><b>Indian Institute of Technology - Guwahati</b></p>
                     <p>Guwahati, Assam, India</p>
-                    <p>2019 - </p>
+                    <p>2019 - 2021</p>
                     <br><br><br>
                     <p class="has-text-justified is-size-2" style="font-family: 'Simplifica'; font-size:2rem;"><b>BE</b></p>
                     <p><b>Vivekanand Education Society's Institute of Technology</b></p>
@@ -99,6 +104,29 @@
                 <br>
                 <br>
                 <br>
+                
+                <div class="projects-slider" id="project-data-container">
+                    <p class="has-text-justified" style="font-family: 'Simplifica'; font-size:3rem;"><b>VQA</b></p>
+                    Defining semantic loss function over answer space in VQA
+                    <br><br>
+                    <p class="has-text-justified">
+                        Introducing an improved loss function which considers the semantic relationship between the ground truth and top K probable answers in Visual Question Answering.
+                    </p>
+                    <br><br>
+                    <p><a href="https://github.com/AsutoshPadhi/Face-verification-siamese-network">View Details</a></p>
+                </div>
+
+                <div class="projects-slider" id="project-data-container">
+                    <p class="has-text-justified" style="font-family: 'Simplifica'; font-size:3rem;"><b>HMM</b></p>
+                    Simulation of a speech controlled virtual robot
+                    <br><br>
+                    <p class="has-text-justified">
+                        Simulation of a GUI based robot based on speech command processed using cepstal values and analyzed using Hidden Markov Model.
+                    </p>
+                    <br><br>
+                    <p><a href="https://github.com/AsutoshPadhi/Face-verification-siamese-network">View Details</a></p>
+                </div>
+
                 <div class="projects-slider" id="project-data-container">
                     <p class="has-text-justified" style="font-family: 'Simplifica'; font-size:3rem;"><b>EYC</b></p>
                     Cross Verification of Images for Eye Care
@@ -147,7 +175,7 @@
                     <p>Feel free to contact me if you want to collaborate or have any queries.</p>
                     <br><br><br>
                     <p style="font-family: 'Simplifica'; font-size: 1.8rem;"><b>Asutosh Padhi</b></p><br>
-                    <p>+91 8976110115</p>
+                    <p>+91 8104065473</p>
                     <p>asutosh.padhi13@gmail.com</p>
 
                     <br><br><br>
@@ -158,7 +186,7 @@
                     </a>
                     <a class="button is-large icon-button" style="margin-right: 2rem; border: none;">
                         <span class="icon">
-                          <i class="fab fa-kaggle"></i>
+                          <i class="fab fa-google"></i>
                         </span>
                     </a>
                     <a class="button is-large icon-button" style="margin-right: 2rem; border: none;" href="https://in.linkedin.com/in/asutosh-padhi-3430aa146">
@@ -216,11 +244,24 @@
         src: url("../static/fonts/BebasNeue/BebasNeue-Bold.ttf")
     }
 
+    @font-face
+    {
+        font-family: 'BebasNeue-Regular';
+        src: url("../static/fonts/BebasNeue/BebasNeue-Regular.ttf")
+    }
+
+    @font-face
+    {
+        font-family: 'Overpass-Semibold';
+        src: url("../static/fonts/Overpass/Overpass-ExtraBoldItalic.ttf")
+    }
+
     #intro-heading
     {
-        font-family: 'Open Sans', sans-serif !important;
-        font-size: 4rem;
-        font-weight: 500;
+        /*font-family: 'Open Sans', sans-serif !important;*/
+        font-family: 'overpass-semibold';
+        font-size: 5rem;
+        /*font-weight: 300;*/
     }
 
     #intro-subheading
@@ -279,6 +320,14 @@
     #about-me-data-container, #education-data-container, #project-data-container, #contact-data-container
     {
         margin: 8rem;
+    }
+
+    #dp
+    {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
     }
 
     #image-container
