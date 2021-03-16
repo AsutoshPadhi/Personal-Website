@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="main">
-    <section id="intro">
+    <section id="intro" class="hero is-fullheight">
         <div class="has-text-centered has-text-white is-size-1" id="intro-content">
             <div id="intro-heading" class="is-size-3-mobile has-text-centered-mobile">
                 <span class="is-size-2-mobile">A</span>SUTOSH
@@ -27,7 +27,7 @@
                 <div class="has-text-centered has-text-white is-size-2 heading-content">
                     About Me
                 </div>
-                <div class="is-pulled-right is-hidden-mobile" id="dp">
+                <div id="dp" class="is-pulled-right is-hidden-mobile">
                     <figure class="image is-128x128">
                         <img src="../static/images/alcher-hex.png">
                     </figure>
@@ -38,7 +38,7 @@
                 <div class="about-slider" id="about-me-data-container">
                     <p class="has-text-justified is-size-3" style="font-family: 'Simplifica'; font-size:2rem;"><b>Hey !</b></p>
                     <br>
-                    <p class="has-text-justified">
+                    <p class="has-text-justified-tablet">
                         I'm a Computer Engineering student based in Mumbai, India. I have a passion for developing products with real life applications. 
                         <br><br>
                         I am very interested in projects relating Deep Learning and Machine Learning.
@@ -49,12 +49,9 @@
 
             </div>
         </div>
-        <div class="hexagon" id="image-container">
-            <img src="../static/images/me.jpg"/>
-        </div>
     </section>
 
-    <section class="section-3">
+    <!-- <section class="section-3">
         <div class="columns is-gapless" id="education">
             <div class="column is-half" id="education-content">
                 
@@ -91,9 +88,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="section-4">
+    <!-- <section class="section-4">
         <div class="columns is-gapless" id="projects">
             <div class="column is-half" id="projects-heading">
                 <div class="has-text-centered has-text-white is-size-2 heading-content">
@@ -165,9 +162,9 @@
 
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="section-5">
+    <!-- <section class="section-5">
         <div class="columns is-gapless" id="contact">
             <div class="column is-half" id="contact-content">
                 <div class="contact-data-container" id="contact-data-container">
@@ -202,28 +199,32 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </div>
 
 <style>
  
+    body
+    {
+        overflow-y: scroll;
+    }
+    
     #intro
     {
         background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.1)),url("../static/images/intro.png");
         background-position: center;
         background-size: cover;
         z-index: -1;
+        height: 200px;
     }
 
     #intro-content
     {
         position: relative;
-        top: 40%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%,-50%);
         width: 60%;
-        /*opacity: 0.7;*/
-        z-index: -1;
     }
 
     @font-face
@@ -281,7 +282,7 @@
     {
         color: #1B9051;
         position: relative;
-        top: 60%;
+        top: 20%;
         /*font-weight: 500;*/
         font-size: 1.1rem;
     }
@@ -289,16 +290,9 @@
     #intro-meta
     {
         color: #1B9051;
-        position: absolute;
-        bottom: 2%;
-        right: 2%;
-    }
-
-    #about-me, #education, #projects, #contact
-    {
-        margin-top: -3rem;
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
+        position: relative;
+        bottom: 1%;
+        left: 95%;
     }
 
     .heading-content
@@ -310,6 +304,11 @@
         width: 50%;
         font-family: 'Simplifica';
         font-size: 3.5rem !important;
+    }
+
+    #about-me
+    {
+        position: relative;
     }
 
     #about-me-heading
@@ -366,110 +365,6 @@
         background-color: #1B9051;
     }
 
-    *
-    {
-        box-sizing: border-box
-    }
-
-    .about-slider, .education-slider, .projects-slider 
-    {
-        display: none
-    }
-    
-    img 
-    {
-        vertical-align: middle;
-    }
-
-    /* Slideshow container */
-    .slideshow-container 
-    {
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-    }
-
-    /* Next & previous buttons */
-    .prev, .next, .next-left
-    {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        padding: 16px;
-        margin-top: -22px;
-        color:lightslategrey;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    /* Position the "next button" to the right */
-    .next 
-    {
-        right: 10px;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .next-left
-    {
-        right: 50%;
-    }
-
-    /* On hover, add a grey background color */
-    .prev:hover, .next:hover 
-    {
-        background-color: #f1f1f1;
-        color: black;
-    }
-
 </style>
-
-<script>
-    $(".main").onepage_scroll({
-        sectionContainer: "section",     // sectionContainer accepts any kind of selector in case you don't want to use section
-        easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in",
-                                         // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
-        animationTime: 1000,             // AnimationTime let you define how long each section takes to animate
-        pagination: true,                // You can either show or hide the pagination. Toggle true for show, false for hide.
-        updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
-        beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
-        afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
-        loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
-        keyboard: true,                  // You can activate the keyboard controls
-        responsiveFallback: false,        // You can fallback to normal page scroll by defining the width of the browser in which
-                                         // you want the responsive fallback to be triggered. For example, set this to 600 and whenever
-                                         // the browser's width is less than 600, the fallback will kick in.
-        direction: "vertical"            // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".  
-     });
-</script>
-
-<script>
-    var slideIndex = [1,1,1];
-    var slideId = ["about-slider", "education-slider", "projects-slider"]
-    showSlides(1, 0);
-    showSlides(1, 1);
-    showSlides(1, 2);
-    
-    function plusSlides(n, no) {
-        setTimeout(showSlides(slideIndex[no] += n, no),10000);
-    }
-    
-    function showSlides(n, no) {
-        var i;
-        var x = document.getElementsByClassName(slideId[no]);
-        if (n > x.length) {slideIndex[no] = 1}    
-        if (n < 1) {slideIndex[no] = x.length}
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-            //$(x[i]).hide(500);
-        }
-        x[slideIndex[no]-1].style.display = "block";  
-        //$(x[i]).show(500);
-        $(x[i]).blur();
-    }
-</script>
 
 {% endblock %}

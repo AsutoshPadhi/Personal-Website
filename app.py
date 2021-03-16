@@ -7,13 +7,13 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-# @app.route('/test')
-# def test():
-#     return render_template('test.html')
+@app.route('/test')
+def test():
+    return render_template('test.html')
 
-# @app.route('/new')
-# def new_page():
-#     return render_template('new.html')
+@app.route('/new')
+def new_page():
+    return render_template('new.html')
 
 # @app.route('/resume')
 # def resume():
